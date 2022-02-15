@@ -1,0 +1,32 @@
+
+Etap 1.
+W pliku Sequences.cs zdefiniować klasy implementujące interfejs IEnumerable
+ - Naturals - zwraca kolejne liczby naturalne (parametr konstruktora to pierwsza liczba, domyślnie 0)
+ - RandomNumbers - zwraca liczby losowe z zakresu <0,max) z zadanym ziarnem generatora
+   (ziarno i max to parametry konstruktora). Wykorzystać klasę System.Random.
+ - Tribonacci - zwraca kolejne liczby ciągu Tribonacciego - t0 = t1 = 0, t2 = 1, tn = tn-1 + tn-2 + tn-3
+ - Catalan - zwraca ciąg liczb Catalana, c0 = 1, cn+1 = cn * 2 * (2 * n + 1) / (n + 2);
+ - Polynomial - jako paramter konstruktora przyjmuje tablicę współczynników wielomianu.
+   Zwraca wartości tego wielomianu liczone dla kolejnych liczb naturalnych
+
+Etap 2.
+W pliku Modifiers.cs zdefiniować klasy implementujące interfejs IModifier
+ - FirstN - jako paramter przyjmuje n. Zwraca n pierwszych wyrazów ciągu
+ - LinearTransform - przekształca ciąg wejściowy (x) według wzoru y = a*x+b, gdzie a,b - parametry konstruktora
+ - Unique - pomija sąsiadujące ze sobą elementy o jednakowej wartości
+ - Prime - zwraca wszystkie liczby pierwsze z ciągu
+
+Etap 3.
+W pliku Merger.cs zdefiniować klasę implementującą interfejs IMerger
+ - Add - dodaje parami kolejne wyrazy ciągów (przerywa gdy skończy się któraś z sekwencji wejściowych)
+   
+Etap 4.
+W pliku Modifiers.cs zdefiniować klasę implementującą interfejs IModifier
+ - ComposedModifier - jako parametr przyjmuje tablicę obiektów IModifier.
+   Zwraca ciąg zmodyfikowany kolejno wszystkimi modyfikatorami (elementami tablicy)
+
+Uwagi:
+ - właściwość Name podaje krótki opis tego co dana klasa robi
+ - nie można używać LINQ
+ - nie można zmieniać pliku Program.cs poza odkomentowaniem odpowiednich linii.
+   Zaimplementowane klasy powinny dawać takie same wyniki jak w pliku Wyniki.txt
